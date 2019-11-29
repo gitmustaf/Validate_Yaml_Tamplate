@@ -16,25 +16,25 @@ class Ref(object):
     def __repr__(self):
         return "Ref(%s)" % self.data
 
-class validate_template(parameter_list):
-    def __init__(self, parameter_list):
-        self.parameter_list = parameter_list
+class validate_template:
+    def __init__(self, data):
+        self.parameter_list = data
 
-    def create_GetAtt(loader,node):
+    def create_GetAtt(self, loader,node):
         value = loader.construct_scalar(node) 
         return GetAtt(value)
 
-    def create_ref(loader,node):
+    def create_ref(self, loader,node):
         value = loader.construct_scalar(node)
         return Ref(value)
 
-    def write_file(file_pointer, value):
+    def write_file(self, file_pointer, value):
         if value != '' :
-            output.write(value)
-        elif:
+            file_pointer.write(value)
+        else:
             file_pointer.write('\n')
 
-    def get_parameters_with_default_value():
+    def get_parameters_with_default_value(self):
         file_path = str(input()) #geting yaml template file path from user
         output = open('output.txt', 'a+')
         with open(file_path, "r") as file:
@@ -46,6 +46,7 @@ class validate_template(parameter_list):
             self.write_file(output, '')
             self.write_file(output, '')
             self.write_file(output, tail or ntpath.basename(head))
+            self.write_file(output, '')
             for doc_key,doc_value in a.items():
                 if doc_key == 'Parameters':
                     for param_key, param_value in doc_value.items():

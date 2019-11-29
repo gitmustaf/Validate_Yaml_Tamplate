@@ -1,0 +1,54 @@
+
+
+CallIQWeb-Test.yaml
+ALBListenerArn ===> arn:aws:elasticloadbalancing:us-east-1:874568408935:listener/app/CallIQWeb-TEST/60b9d767fe209eee/310876749d2ad967
+ALBAdditionalListenerArn ===> arn:aws:elasticloadbalancing:us-east-1:874568408935:listener/app/CallIQWeb-TEST/60b9d767fe209eee/5f046b2a9eed9615
+AppHealthCheckPath ===> /
+AppId ===> CallIQWeb
+BizUnit ===> commprop2
+ConfigPersonality ===> uwcl-app
+ConfigVersion ===> default
+ContainerSize ===> t3.medium
+InstanceLabel ===> CallIQWeb-TEST
+KeyName ===> CP-USE-Test-CallIQWeb
+NumServerInstances ===> 1
+TimeoutInMinutes ===> 120
+UWApplicationGroupId ===> Quality Planning
+UWBusinessUnit ===> UWPL
+UWDev ===> Jersey City
+
+
+CallIQWeb-Test-ALB.yaml
+AppId ===> CallIQWeb
+BizUnit ===> commprop2
+DeploymentZone ===> private
+UWApplicationGroupId ===> Quality Planning
+UWBusinessUnit ===> UWPL
+UWDev ===> Jersey City
+
+
+CallIQWeb-Accep.yaml
+ALBListenerArn ===> arn:aws:elasticloadbalancing:us-east-1:874568408935:listener/app/CallIQWeb-ACCEP/80d534fd46aa27f1/e284a15da60fbd54
+ALBAdditionalListenerArn ===> arn:aws:elasticloadbalancing:us-east-1:874568408935:listener/app/CallIQWeb-ACCEP/80d534fd46aa27f1/f2400e27fbe852bc
+AppHealthCheckPath ===> /
+AppId ===> CallIQWeb
+BizUnit ===> commprop2
+ConfigPersonality ===> uwcl-app
+ConfigVersion ===> default
+ContainerSize ===> t3.medium
+InstanceLabel ===> CallIQWeb-ACCEP
+KeyName ===> CP-USE-Accep-SCOPES
+NumServerInstances ===> 1
+TimeoutInMinutes ===> 120
+UWApplicationGroupId ===> Quality Planning
+UWBusinessUnit ===> UWPL
+UWDev ===> Jersey City
+
+
+CallIQWeb-Accep-ALB.yaml
+AppId ===> CallIQWeb
+BizUnit ===> commprop2
+DeploymentZone ===> private
+UWApplicationGroupId ===> Quality Planning
+UWBusinessUnit ===> UWPL
+UWDev ===> Jersey City
